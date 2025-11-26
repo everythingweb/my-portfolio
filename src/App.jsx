@@ -1,18 +1,12 @@
 import './App.css'
-import Navbar1 from './components/Navbar1'
-import Hero from './components/Hero'
+import HeroSection from './components/HeroSection'
 import CompanyLogo from './components/CompanyLogo'
 import PurposeSection from './components/PurposeSection'
 import TestimonialsSection from './components/TestimonialsSection'
 import Footer from './components/Footer';
-import DataAnalysisDetail from './components/DataAnalysisDetail' ;// Corrected spelling
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import WebsiteDevelopmentDetail from './components/WebDevDetail';
-import CybersecurityDetail from './components/CyberSecurity';
 import CourseSection from './components/CourseSection';
 import WhatsAppButton from './components/WhatsappButton';
-import NextSessions from './components/NextSessions';
-import JoinTrainingBanner from './components/JoinTrainingBanner';
 import SinglePageDetail from './components/SinglePageDetail'
 import ScrollToTop from './components/ScrollToTop'
 import SinglePageDetailGenerative from './components/courses/ai/SinglePageDetailGenerative'
@@ -49,11 +43,11 @@ import DigitalMarketing from './components/courses/market/DigitalMarketing'
 import Ecommercecourse from './components/courses/market/Ecommercecourse'
 {/**market imports ends here */}
 const App = () => {
-  const myWhatsAppNumber = '2347018952882'; // Change to your actual number (international format, no + or spaces)
-  const prefilledMessage = "Hello, I would like to know more about the training.";
+  const myWhatsAppNumber = '2348189951230'; // Change to your actual number (international format, no + or spaces)
+  const prefilledMessage = "Hello, I would like to know more about your services.";
   return (
     
-    <BrowserRouter basename="/bucregaltech">
+    <BrowserRouter basename="/portfolio">
       <ScrollToTop />
       <Routes>
         {/* Route for the main landing page */}
@@ -61,14 +55,11 @@ const App = () => {
           <main className="relative min-h-screen overflow-x-hidden bg-white text-gray-800 font-sans">
             <div className="absolute -top-28 -left-28 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-500/20 to-pink-500/20 rounded-full blur-[80px] -z-10"></div>
             <div className="overflow-hidden">
-              <Navbar1 />
-              <Hero />
+              <HeroSection />
               <CompanyLogo />
               <PurposeSection />
               <CourseSection />
                <TestimonialsSection />
-              <NextSessions />
-              <JoinTrainingBanner />
               <Footer />
 
             </div>

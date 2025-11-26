@@ -1,6 +1,6 @@
 # Modern Business Landing Page
 
-![modern-business-landing-page](/src/assets/react-busines-landing-page.png)
+![My Portfolio Website](/src/assets/portfolio.png)
 
 A sleek and responsive landing page built with React, Tailwind CSS, and Framer Motion animations.
 
@@ -34,9 +34,9 @@ A sleek and responsive landing page built with React, Tailwind CSS, and Framer M
 ### Installation
 1. Clone the repository
 ```bash
-git clone https://github.com/mdalmamunit427/modern-business-landing-page-react-tailwindcss
+git clone https://github.com/everythingweb/portfolio
 
-cd modern-business-landing-page-react-tailwindcss
+cd portfolio
 ```
 
 

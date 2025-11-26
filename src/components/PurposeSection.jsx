@@ -6,12 +6,12 @@ const PurposeSection = () => {
     {
       icon: "", // Replace with your actual icon component or image
       title: "Built for impact",
-      description: "We help you start or advance your career by learning high-demand skills in a fast-paced environment"
+      description: "From the ground up, the user experience has been built for impact, prioritizing clarity and delight."
     },
     {
       icon: "", // Replace with your actual icon component or image
       title: "Building the Future Together",
-      description: "We offer transformative education, empowering students with the skills and confidence to thrive in the tech industry"
+      description: "By working together, we will transform possibilities into reality and establish a new benchmark for success."
     }
   ];
 
@@ -35,7 +35,7 @@ const PurposeSection = () => {
               variants={textVariant(0.5)}
               className="text-3xl md:w-4/5 md:text-4xl font-bold text-[#373435]"
             >
-             Gain valuable career skills
+             Let's build your vision.
             </motion.h2>
           </motion.div>
 

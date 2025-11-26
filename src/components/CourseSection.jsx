@@ -1,64 +1,72 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-// ... (Your image imports remain the same)
-import deepLearningImage from '../assets/ai/download (2).jpg';
-import buildProductImage from '../assets/ai/download (4).jpg';
-import dev1 from '../assets/cloud,devOps/dev1.jpg';
-import dev2 from '../assets/cloud,devOps/dev2.jpg';
-import dev3 from '../assets/cloud,devOps/dev3.jpg';
-import dev4 from '../assets/cloud,devOps/dev4.jpg';
-import dev5 from '../assets/cloud,devOps/dev5.png';
-import soft1 from '../assets/software development/soft1.png';
-import soft2 from '../assets/software development/soft2.jpg';
-import soft3 from '../assets/software development/soft3.svg';
-import soft4 from '../assets/software development/soft4.png';
-import data1 from '../assets/Data/data1.png';
-import data2 from '../assets/Data/data2.png';
-import data3 from '../assets/Data/data3.png';
-import market2 from '../assets/marketing/market2.jpg';
-import market3 from '../assets/marketing/market3.jpg';
-import market4 from '../assets/marketing/market4.jpg';
-import design1 from '../assets/design/design1.svg';
-import design2 from '../assets/design/design2.jpg';
-import design3 from '../assets/design/design3.jpg';
+import dev1 from '../assets/websites/blog.jpg';
+import dev2 from '../assets/websites/business.jpg';
+import dev3 from '../assets/websites/ecommerce.jpg';
+import dev4 from '../assets/websites/educational.png';
+import dev5 from '../assets/websites/entertainment.jpg';
+import soft1 from '../assets/websites/event.jpg';
+import soft2 from '../assets/websites/informational.jpg';
+import soft3 from '../assets/websites/news.jpg';
+import soft4 from '../assets/websites/Nike.jpg';
+import data1 from '../assets/websites/online forum.jpg';
+import data2 from '../assets/websites/portfolio.png';
+import data3 from '../assets/websites/startup.jpg';
+import design1 from '../assets/websites/travel.jpg';
+import design2 from '../assets/websites/University.jpg';
+import design3 from '../assets/websites/blog.jpg';
+import { FaEye, FaGithub } from 'react-icons/fa';
 
 // --- Data Structures (Unchanged) ---
 // Define the structure for a single course
 const courseData = {
     // ... (Your courseData object remains the same)
-   
-    'Cloud, DevOps and Cybersecurity': [
-        { level: 'Introduction', title: 'Introduction to Cybersecurity', description: 'This program serves as an introductory course to the field of cybersecurity. By completing this track, you will acquire a solid understanding cybersecurity.', imageSrc: dev1, route: '/Introduction' },
-        { level: 'Introduction', title: 'The DevOps Bootcamp: Kubernetes Certified', description: 'Master the fundamentals of DevOps and cloud-native technologies with our Kubernetes-certified training program.', imageSrc: dev2, route: '/TheDevOps' },
-        { level: 'Introduction', title: 'Azure Fundamentals Certification Preparation', description: 'Gain a solid foundation in Microsoft Azure and get ready for your Azure Fundamentals Certification.', imageSrc: dev3, route: '/AzureFundamentals' },
-        { level: 'Introduction', title: 'Cybersecurity – CompTIA Security+ Certified', description: 'Enroll in our cybersecurity training to gain in-depth knowledge and prepare for the CompTIA Security+ certification.', imageSrc: dev5, route: '/CybersecurityCompTIA' },
-        { level: 'Introduction', title: 'AWS Cloud Practitioner Certification Preparation', description: 'Build a strong foundation in cloud computing and prepare for the AWS Certified Cloud Practitioner certification.', imageSrc: dev4, route: '/AWSCloud' },
-    ],
-    'Software Development': [
-        { level: 'Introduction', title: 'Introduction to Web Programming', description: 'A beginner-friendly training, tailored to help you build your first website with hands-on learning and expert guidance.', imageSrc: soft1,route:'/SoftwareIntroduction' },
-        { level: 'Advanced', title: 'Front End Developer – React JS', description: 'Dive into React JS mastery in our advanced course for developers with basic front-end skills.', imageSrc: soft2,route:'/SoftwareFrontEnd' },
-        { level: 'Advanced', title: 'Back End Developer – Node-JS', description: 'Master the server-side of web development with our Back Web Development Course. Learn to build robust, scalable, and secure web applications using industry standard technologies.', imageSrc: soft3,route:'/SoftwareBackend' },
-        { level: 'Advanced', title: 'Fullstack Developer – MERN', description: 'Learn to build complete web applications from scratch with our Full stack Web Development Course. Master both front-end and back-end development, and become a versatile full-stack developer.', imageSrc: soft4,route: '/SoftwareFullstack' },
-    ],
-    'Data': [
-        { level: 'Introduction', title: 'Data Scientist', description: 'Master essential data skills in our bootcamp for career changers and entry-level analysts. Blend theory and practice for success in the dynamic data world.', imageSrc: data3 ,route: '/DataScientist'},
-        { level: 'Introduction', title: 'Introduction to Python', description: 'Start with our beginner-friendly course, where you’ll learn the basics to build your first Python app.', imageSrc: data2,route: '/IntroductionToPython' },
-        { level: 'Introduction', title: 'Data Analytics – Microsoft Power BI Certified', description: 'Excel in data analytics with our Power BI Data Analyst training, ideal for professionals seeking Microsoft Power BI certification.', imageSrc: data1 ,route: '/DataAnalytics'},
-    ],
+   'All':[ { level: 'Just Launched', title: 'Online forum website', description: 'Connecting professionals, sharing knowledge, and fostering innovation. Join our community today to grow your expertise and build the future together.', imageSrc: data1, route: 'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech' },
+        { level: 'Latest', title: 'Business website', description: 'Your vision, our expertise. We craft custom digital solutions designed for impact, ensuring exceptional user experiences and lasting business value.', imageSrc: dev2, route: 'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech' },
+        { level: 'Just Launched', title: 'Portfolio website', description: 'Blending creative design with robust functionality. This portfolio showcases projects where complex challenges were transformed into elegant, high-impact user experiences.', imageSrc: data2, route: 'https://everythingweb.github.io/bucregaltech/' ,githubUrl:'https://github.com/everythingweb/bucregaltech'},
+        { level: 'New', title: 'Educational website', description: 'Unlock your potential with expert-led courses. Learn in-demand skills, connect with innovators, and build a brighter career future, starting today.', imageSrc: dev4, route: 'https://everythingweb.github.io/bucregaltech/' ,githubUrl:'https://github.com/everythingweb/bucregaltech'},
+        { level: 'Just Launched', title: 'University website', description: 'Discover your potential with groundbreaking academics and a vibrant campus community. Start your journey to shape the future here.', imageSrc: design2, route: 'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech' },
+        { level: 'Highlights', title: 'Event website', description: 'Innovation meets inspiration at The Number One Convention. Join global leaders for a curated experience of cutting-edge talks, networking, and discovery.', imageSrc: soft1, route: 'https://everythingweb.github.io/bucregaltech/' ,githubUrl:'https://github.com/everythingweb/bucregaltech'},
+        { level: 'Spotlight ', title: 'Blog website', description: 'Dive into insightful articles and fresh perspectives covering tech, lifestyle, and global trends. Feed your curiosity and connect with a community of thinkers.', imageSrc: design3,route:'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech' },
+        { level: 'Trending', title: 'Informational website', description: 'Empower your decisions with vetted, reliable data and expert insights. Access the knowledge you need to navigate complexity and stay ahead.', imageSrc: soft2,route:'https://everythingweb.github.io/bucregaltech/' ,githubUrl:'https://github.com/everythingweb/bucregaltech'},
+        { level: 'Just Launched', title: 'NEWS website', description: 'Stay informed, stay ahead. We deliver unbiased, essential news from around the globe, giving you the context to understand and navigate the modern world.', imageSrc: soft3,route:'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech' },
+        { level: 'Just Launched', title: 'Entertainment website', description: 'Dive into endless entertainment: discover the latest movies, music, and exclusive shows. Your ultimate source for captivating content starts here.', imageSrc: dev5,route: 'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech' },
+        { level: 'Just Launched', title: 'Travel website', description: 'Explore hidden worlds, create unforgettable memories, and travel with confidence. Your next great adventure is waiting. Book your escape now.', imageSrc: design1,route: 'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech' },
+        { level: 'Introduction', title: 'E-commerce website', description: 'Shop smart, live beautifully. Discover curated collections, seamless checkout, and fast shipping for everything you need right now.', imageSrc: dev3 ,route: 'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech'},
+        { level: 'Introduction', title: 'Nike website', description: 'Push boundaries and achieve your personal best with innovative gear designed for champions. Find your greatness today.', imageSrc: soft4,route: 'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech' },
+        { level: 'Introduction', title: 'Start up website', description: 'Transforming industries through innovation. We provide the cutting-edge solutions and strategic support your business needs to scale and lead the market.', imageSrc: data3 ,route: 'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech'},
     
-    'Design': [
-        { level: 'Advanced', title: 'UX & UI Design', description: 'Deepen your UX and UI skills with our advanced training. Elevate your proficiency for seamless digital experiences!', imageSrc: design1 ,route: '/UiUx'},
-        { level: 'Advanced', title: 'Graphic Design – Adobe Certified', description: 'Elevate your graphic design skills with our specialized training. Become Adobe certified for advanced proficiency.', imageSrc: design2 ,route: '/GraphicDesign'},
-        { level: 'Introduction', title: 'Introduction to Graphic Design', description: 'Learn the essentials of graphic design in just 3 months. Develop your skills in creating eye-catching visuals using Adobe Illustrator and boost your creative potential', imageSrc: design3 ,route: '/IntroductionToGraphic'},
+  
+   ],
+    'Productivity Web Apps': [
+        { level: 'Just Launched', title: 'Online forum website', description: 'Connecting professionals, sharing knowledge, and fostering innovation. Join our community today to grow your expertise and build the future together.', imageSrc: data1, route: 'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech' },
+        { level: 'Latest', title: 'Business website', description: 'Your vision, our expertise. We craft custom digital solutions designed for impact, ensuring exceptional user experiences and lasting business value.', imageSrc: dev2, route: 'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech' },
+        { level: 'Just Launched', title: 'Portfolio website', description: 'Blending creative design with robust functionality. This portfolio showcases projects where complex challenges were transformed into elegant, high-impact user experiences.', imageSrc: data2, route: 'https://everythingweb.github.io/bucregaltech/' ,githubUrl:'https://github.com/everythingweb/bucregaltech'},
+        { level: 'New', title: 'Educational website', description: 'Unlock your potential with expert-led courses. Learn in-demand skills, connect with innovators, and build a brighter career future, starting today.', imageSrc: dev4, route: 'https://everythingweb.github.io/bucregaltech/' ,githubUrl:'https://github.com/everythingweb/bucregaltech'},
+        { level: 'Just Launched', title: 'University website', description: 'Discover your potential with groundbreaking academics and a vibrant campus community. Start your journey to shape the future here.', imageSrc: design2, route: 'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech' },
+        { level: 'Highlights', title: 'Event website', description: 'Innovation meets inspiration at The Number One Convention. Join global leaders for a curated experience of cutting-edge talks, networking, and discovery.', imageSrc: soft1, route: 'https://everythingweb.github.io/bucregaltech/' ,githubUrl:'https://github.com/everythingweb/bucregaltech'}
     ],
+    'Content Management Web Apps': [
+        { level: 'Spotlight ', title: 'Blog website', description: 'Dive into insightful articles and fresh perspectives covering tech, lifestyle, and global trends. Feed your curiosity and connect with a community of thinkers.', imageSrc: design3,route:'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech' },
+        { level: 'Trending', title: 'Informational website', description: 'Empower your decisions with vetted, reliable data and expert insights. Access the knowledge you need to navigate complexity and stay ahead.', imageSrc: soft2,route:'https://everythingweb.github.io/bucregaltech/' ,githubUrl:'https://github.com/everythingweb/bucregaltech'},
+        { level: 'Just Launched', title: 'NEWS website', description: 'Stay informed, stay ahead. We deliver unbiased, essential news from around the globe, giving you the context to understand and navigate the modern world.', imageSrc: soft3,route:'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech' },
+        { level: 'Just Launched', title: 'Entertainment website', description: 'Dive into endless entertainment: discover the latest movies, music, and exclusive shows. Your ultimate source for captivating content starts here.', imageSrc: dev5,route: 'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech' },
+         { level: 'Just Launched', title: 'Travel website', description: 'Explore hidden worlds, create unforgettable memories, and travel with confidence. Your next great adventure is waiting. Book your escape now.', imageSrc: design1,route: 'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech' }
+    ],
+    'E-commerce Web Apps': [
+        { level: 'Introduction', title: 'E-commerce website', description: 'Shop smart, live beautifully. Discover curated collections, seamless checkout, and fast shipping for everything you need right now.', imageSrc: dev3 ,route: 'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech'},
+        { level: 'Introduction', title: 'Nike website', description: 'Push boundaries and achieve your personal best with innovative gear designed for champions. Find your greatness today.', imageSrc: soft4,route: 'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech' },
+        { level: 'Introduction', title: 'Start up website', description: 'Transforming industries through innovation. We provide the cutting-edge solutions and strategic support your business needs to scale and lead the market.', imageSrc: data3 ,route: 'https://everythingweb.github.io/bucregaltech/',githubUrl:'https://github.com/everythingweb/bucregaltech'},
+    ]
+    
 };
 
 // List of available course categories
 const courseCategories = [
-    { name: 'Cloud, DevOps and Cybersecurity', icon: '☁️' },
-    { name: 'Software Development', icon: '💻' },
-    { name: 'Data', icon: '📊' },
-    { name: 'Design', icon: '🎨' }
+    { name: 'All', icon: '' },
+    { name: 'Productivity Web Apps', icon: '☁️' },
+    { name: 'Content Management Web Apps', icon: '💻' },
+    { name: 'E-commerce Web Apps', icon: '📊' }
 ];
 
 
@@ -92,13 +100,29 @@ const CourseCard = ({ course }) => {
                 <p className="text-sm text-gray-600 leading-relaxed">{course.description}</p>
             </div>
 
-            <Link 
-                // Uses the 'route' field from the course data
-                to={course.route || '#'} 
-                className="w-full py-4 bg-[#2D3353] text-white text-base font-bold transition duration-200 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 text-center"
-            >
-                Learn more
-            </Link>
+           <div 
+    className="w-full py-4 bg-[#2D3353] text-white transition duration-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 flex justify-center space-x-8"
+>
+    {/* 👁️ Eye Icon Link (Live Demo/More Info) */}
+    <Link 
+        to={course.route} 
+        className="text-white hover:text-gray-400"
+        title="View Live Project" // Add a helpful title
+    >
+        <FaEye className="text-2xl" /> 
+    </Link>
+
+    {/* 🐙 GitHub Icon Link (Source Code) */}
+    <a 
+        href={course.githubUrl} 
+        target="_blank" // Opens in a new tab
+        rel="noopener noreferrer" 
+        className="text-white hover:text-gray-400"
+        title="View Source Code on GitHub" // Add a helpful title
+    >
+        <FaGithub className="text-2xl" />
+    </a>
+</div>
         </div>
     );
 };
@@ -126,7 +150,7 @@ const CourseSection = () => {
 
     return (
         <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8" id="courses">
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-8 text-center">Explore Our Programs</h2>
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-8 text-center">My latest projects</h2>
             
             {/* --- Header/Tab Section --- */}
             <div className="flex flex-wrap justify-center p-2 sm:p-4 mb-12 bg-gray-50 rounded-xl shadow-inner">

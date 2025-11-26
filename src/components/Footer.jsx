@@ -51,13 +51,13 @@ const Footer = () => {
             >
               <div className="w-4 h-4 bg-blue-600 rounded-full opacity-75"></div>
               <div className="w-4 h-4 bg-red-500 rounded-full -ml-2"></div>
-              <span className="text-xl font-medium ml-1">Buc Regal Tech</span>
+              <span className="text-xl font-medium ml-1">Everything Web</span>
             </motion.div>
             <motion.p 
               variants={fadeIn('up', 0.6)}
               className="text-gray-600 mb-6"
             >
-              Suite 30, 2nd floor, Magodo Estate Plaza, 13, Emmanuel Keshi Street, Magodo phase II, Lagos. Nigeria
+          
             </motion.p>
             <motion.div 
               variants={fadeIn('up', 0.7)}

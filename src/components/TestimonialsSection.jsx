@@ -6,7 +6,7 @@ import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import male1 from '../assets/students/male1.jpg';
-import male2 from '../assets/students/male2.jpg'
+import male2 from '../assets/students/white.jpg'
 import female1 from '../assets/students/female1.png'
 import male3 from '../assets/students/male3.jpg';
 import male4 from '../assets/students/male4.jpg'
@@ -15,39 +15,40 @@ import female2 from '../assets/students/female2.avif'
 const testimonials = [
   {
     id: 1,
-    name: "Damilare Mark", 
+    name: "Susan Taylor", 
     image: male1,
-    text: "Studying software development and product design at Buc Regal Tech was a game-changer for my career. The comprehensive curriculum and hands-on projects gave me the skills and confidence I needed to excel in the tech industry.",
+    text: "He delivered a flawless and fast website that immediately elevated our brand. I sincerely recommend him; he is a great person to work with.",
   },
   {
     id: 2,
-    name: "Mike Johnson",
+    name: "Robert Smith",
     image: male2, 
-    text: "I can't thank Buc Regal Tech enough for the top-notch education in software development and product design. The experienced instructors and real-world projects helped me land a dream job in the tech world.",
+    text: "Since launching the site Mubarak built, our leads have doubled, that's the bottom line. It wasn't just code; it was a major investment that's already paying off. Highly recommend!",
   },
   {
     id: 3,
-    name: "Aaliyah Hassan",
+    name: "Aaliyah Al-Hassan",
     image: female1,
-    text: "Buc Regal Tech not only taught me the technical skills but also the problem-solving mindset required in the tech field. I'm now working on cutting-edge projects, and it's all thanks to the incredible training I received here.",
+    text: "Mubarak's communication was a breath of fresh air. He understood our exact vision immediately and kept us informed every step. It felt like he was part of our team.",
   },
   {
     id: 4,
-    name: "Demola Olusegun",
+    name: "Micheal Rodriguez",
     image: male3,
-    text: "Studying software development and product design at Buc Regal Tech was a game-changer for my career. The comprehensive curriculum and hands-on projects gave me the skills and confidence I needed to excel in the tech industry.",
+    text: "He didn't just build a website; he engineered a reliable, high-speed platform that handles our traffic spikes without breaking a sweat. That's real business stability.",
+
   },
   {
     id: 5,
-    name: "Chukwuemeka Bright",
+    name: "Mark Wilson",
     image: male4, 
-    text: "I can't thank Buc Regal Tech enough for the top-notch education in software development and product design. The experienced instructors and real-world projects helped me land a dream job in the tech world.",
+    text: "When our old site crashed daily, Mubarak rebuilt it from the ground up. His deep technical fix stabilized everything, making our operations reliable and profitable again.",
    },
   {
     id: 6,
-     name: "Chidinma Anayochukwu",
+     name: "David Miller",
     image: female2,
-    text: "Buc Regal Tech not only taught me the technical skills but also the problem-solving mindset required in the tech field. I'm now working on cutting-edge projects, and it's all thanks to the incredible training I received here.",
+    text: "His technical skill and clear communication led to a site that genuinely boosted our business impact. A top-tier experience.",
    },
 
 ];
@@ -63,13 +64,13 @@ const TestimonialsSection = () => {
           variants={textVariant(0.2)}
           className="text-3xl md:text-4xl font-bold mb-4"
         >
-          What our happy students say
+          What our happy clients  say
         </motion.h2>
         <motion.p 
           variants={fadeIn('up', 0.4)}
           className="text-gray-600"
         >
-          Things that make it the best place to start learning
+          Things that make it the best place to start building
         </motion.p>
       </motion.div>
 
