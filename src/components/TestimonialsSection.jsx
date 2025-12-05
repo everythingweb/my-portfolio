@@ -5,21 +5,14 @@ import 'swiper/css/navigation';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
-<<<<<<< HEAD
+
 import male1 from '../assets/students/susan taylor.jpg';
 import male2 from '../assets/students/white.jpg'
 import female1 from '../assets/students/female1.png'
 import male3 from '../assets/students/rodrigues.jpg';
 import male4 from '../assets/students/mark wilson.webp'
 import female2 from '../assets/students/david miller.jpg'
-=======
-import male1 from '../assets/students/male1.jpg';
-import male2 from '../assets/students/white.jpg'
-import female1 from '../assets/students/female1.png'
-import male3 from '../assets/students/male3.jpg';
-import male4 from '../assets/students/male4.jpg'
-import female2 from '../assets/students/female2.avif'
->>>>>>> 45a69552ca7c5a29f865084a2b20c7178ecd0760
+
 
 const testimonials = [
   {
