@@ -39,7 +39,7 @@ const HeroSection = () => {
              Upgrade your    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500">online</span> potential
             </h1>
             <p className="mt-6 text-lg text-gray-600 max-w-md mx-auto lg:mx-0">
-              Hi, I'm Mubarak! With more than 6 years of experience, I'm ready to be a part of your wonderful project!
+              Hi, I'm Mubarak! With more than 6 years of experience, I'm ready to be a part of your wonderful project
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
               <button className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
