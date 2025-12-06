@@ -1,6 +1,7 @@
 {
   "name": "sass-landing-page",
   "private": true,
+  "homepage": "https://everythingweb.github.io/my-portfolio",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -41,6 +42,5 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.13",
     "vite": "^6.1.0"
-  },
-  "homepage": "https://everythingweb.github.io/my-portfolio/"
+  }
 }
