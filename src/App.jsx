@@ -47,7 +47,7 @@ const App = () => {
   const prefilledMessage = "Hello, I would like to know more about your services.";
   return (
     
-    <BrowserRouter basename="/portfolio">
+    <BrowserRouter basename="/my-portfolio">
       <ScrollToTop />
       <Routes>
         {/* Route for the main landing page */}
