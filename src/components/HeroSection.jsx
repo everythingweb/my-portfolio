@@ -1,7 +1,9 @@
 import React from 'react';
 import gemini from '../assets/gray.png';
-import resumeFile from '../assets/resume.pdf'; 
+import resumeFile from '../assets/bello resume-latest.pdf'; 
 import { motion } from "framer-motion";
+import { Link } from 'react-scroll';
+import { Element } from 'react-scroll';
 
 // --- PASTE HELPER FUNCTIONS HERE IF NOT IMPORTING ---
 const fadeIn = (direction, delay) => ({
@@ -20,7 +22,7 @@ const textVariant = (delay) => ({
 // ----------------------------------------------------
 
 const HeroSection = () => {
-  return ( 
+  return ( <Element name="contact">
     <div className="min-h-screen bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center py-10 px-4 sm:px-6 lg:px-8">
       
       {/* Main card wrapper container */}
@@ -45,13 +47,12 @@ const HeroSection = () => {
             <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold">E</div>
             <span className="text-xl font-bold text-gray-800">Everything Web</span>
           </div>
-          <nav className="hidden md:flex space-x-8 text-gray-600 font-medium">
-            <a href="#about" className="hover:text-purple-600 transition duration-300">About</a>
-            <a href="#" className="hover:text-purple-600 transition duration-300">Service</a>
-            <a href="#courses" className="hover:text-purple-600 transition duration-300">Portfolio</a>
-            <a href="#courses" className="hover:text-purple-600 transition duration-300">Projects</a>
-            <a href="#" className="hover:text-purple-600 transition duration-300">Contact</a>
-          </nav>
+          <nav className="hidden md:flex space-x-8 text-gray-600 font-medium cursor-pointer">
+  <Link to="about" smooth={true} duration={500} className="hover:text-purple-600 transition duration-300">About</Link>
+  <Link to="services" smooth={true} duration={500} className="hover:text-purple-600 transition duration-300">Services</Link>
+  <Link to="portfolio" smooth={true} duration={500} className="hover:text-purple-600 transition duration-300">Portfolio</Link>
+  <Link to="contact" smooth={true} duration={500} className="hover:text-purple-600 transition duration-300">Contact</Link>
+</nav>
           <div className="flex space-x-4">
             <a href="#" className="text-gray-400 hover:text-gray-600"><i className="fab fa-facebook-f"></i></a>
             <a href="#" className="text-gray-400 hover:text-gray-600"><i className="fab fa-twitter"></i></a>
@@ -80,8 +81,7 @@ const HeroSection = () => {
               variants={fadeIn('up', 0.6)}
               className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto"
             >
-              Your competitors are winning because of better performance. I provide a comprehensive technical audit of your niche to identify their strengths, then build you a faster, more unique React-powered platform that dominates search rankings and doubles your conversion potential.
-            </motion.p>
+I provide deep technical audits to uncover your niche's winning strategies, then replace them with a faster, more unique React-powered platform that converts visitors into customers.            </motion.p>
 
             {/* Animated Action Buttons */}
             <motion.div 
@@ -89,12 +89,12 @@ const HeroSection = () => {
               className="mt-10 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4"
             >
               <a
-                href="https://wa.me."
+                href="https://calendly.com/freelancedev075/project-consultation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 text-center w-64 sm:w-auto"
               >
-                Hire Me
+                Get Your Technical Audit
               </a>
               <a
                 href={resumeFile}
@@ -126,7 +126,7 @@ const HeroSection = () => {
       
       </motion.div>
     </div>
-  );
+  </Element>);
 };
 
 export default HeroSection;

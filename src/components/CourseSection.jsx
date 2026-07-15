@@ -16,6 +16,7 @@ import design1 from '../assets/websites/travel.jpg';
 import design2 from '../assets/websites/University.jpg';
 import { FaEye, FaGithub } from 'react-icons/fa';
 import { ExternalLink, Zap } from "lucide-react";
+import { Element } from 'react-scroll';
 
 // --- FRAMER MOTION HELPER UTILITIES ---
 const fadeIn = (direction, delay) => ({
@@ -45,26 +46,26 @@ const textVariant = (delay) => ({
 
 const courseData = {
     'All': [
-        { level: 'Just Launched', title: 'Online forum website', description: 'A community-driven discussion platform featuring categorized boards and real-time user interactions.', imageSrc: data1, route: 'https://everythingweb.github.io/online-forum/', githubUrl: 'https://github.com', outcome: "Increased user engagement by 40% through gamification." },
-        { level: 'Latest', title: 'Business website', description: 'Professional corporate presence showcasing service offerings and integrated lead generation contact forms.', imageSrc: dev2, route: 'https://everythingweb.github.io/business/', githubUrl: 'https://github.com', outcome: "Boosted lead conversion rates by 25% via SEO." },
+        { level: 'Just Launched', title: 'Online forum website', description: 'A community-driven discussion platform featuring categorized boards and real-time user interactions.', imageSrc: data1, route: 'https://everythingweb.github.io/online-forum/', githubUrl: 'https://github.com/everythingweb/online-forum', outcome: "Increased user engagement by 40% through gamification." },
+        { level: 'Latest', title: 'Business website', description: 'Professional corporate presence showcasing service offerings and integrated lead generation contact forms.', imageSrc: dev2, route: 'https://everythingweb.github.io/business/', githubUrl: 'https://github.com/everythingweb/business', outcome: "Boosted lead conversion rates by 25% via SEO." },
         { level: 'Just Launched', title: 'Portfolio website', description: 'Creative digital showcase highlighting professional projects with an interactive, high-performance media gallery.', imageSrc: data2, route: 'https://everythingweb.github.io/my-portfolio/', githubUrl: 'https://github.com/everythingweb/my-portfolio', outcome: "Secured five high-value freelance contracts within month one." },
         { level: 'New', title: 'Educational website', description: 'Interactive learning management system providing structured course modules and automated student assessments.', imageSrc: dev4, route: 'https://everythingweb.github.io/bucregaltech/', githubUrl: 'https://github.com/everythingweb/bucregaltech', outcome: "Improved student completion rates by 50% using analytics." },
-        { level: 'Just Launched', title: 'University website', description: 'Comprehensive academic portal managing student admissions, faculty directories, and campus resource scheduling.', imageSrc: design2, route: 'https://everythingweb.github.io/harvod/', githubUrl: 'https://github.com', outcome: "Streamlined application processing time by 15% using automation." },
+        { level: 'Just Launched', title: 'University website', description: 'Comprehensive academic portal managing student admissions, faculty directories, and campus resource scheduling.', imageSrc: design2, route: 'https://everythingweb.github.io/harvod/', githubUrl: 'https://github.com/everythingweb/harvod', outcome: "Streamlined application processing time by 15% using automation." },
         { level: 'Highlights', title: 'Event website', description: 'Dynamic event management site featuring live ticketing updates and integrated speaker schedules.', imageSrc: soft1, route: 'https://everythingweb.github.io/convention/', githubUrl: 'https://github.com/everythingweb/convention', outcome: "Sold out early-bird tickets in under three hours." },
         { level: 'Trending', title: 'Informational website', description: 'Centralized knowledge base providing searchable documentation and structured guides for technical users.', imageSrc: soft2, route: 'https://everythingweb.github.io/informational/', githubUrl: 'https://github.com/everythingweb/informational', outcome: "Reduced support tickets by 20% using better navigation." },
-        { level: 'Just Launched', title: 'NEWS website', description: 'High-traffic editorial platform delivering breaking news stories with automated social media sharing.', imageSrc: soft3, route: 'https://everythingweb.github.io/news/', githubUrl: 'https://github.com', outcome: "Achieved 1M monthly views using optimized caching strategies." },
-        { level: 'Just Launched', title: 'Entertainment website', description: 'Immersive media platform hosting streaming video content and interactive celebrity fan polls.', imageSrc: dev5, route: 'https://everythingweb.github.io/entertainment/', githubUrl: 'https://github.com', outcome: "Expanded subscriber base by 35% through viral content." },
-        { level: 'Just Launched', title: 'Travel website', description: 'Global travel agency portal offering real-time flight bookings and curated destination guides.', imageSrc: design1, route: 'https://everythingweb.github.io/travel/', githubUrl: 'https://github.com', outcome: "Reduced booking abandonment by 12% via UX redesign." },
-        { level: 'Introduction', title: 'E-commerce website', description: 'Scalable online storefront featuring secure payment processing and automated inventory management systems.', imageSrc: dev3, route: 'https://everythingweb.github.io/e-commerce/', githubUrl: 'https://github.com', outcome: "Increased average order value by 18% through cross-selling." },
-        { level: 'Introduction', title: 'Nike website', description: 'Premium athletic commerce experience featuring custom product builders and high-fidelity product imagery.', imageSrc: soft4, route: 'https://everythingweb.github.io/nike/', githubUrl: 'https://github.com', outcome: "Decreased mobile checkout friction by 22% using Apple-Pay." },
-        { level: 'Introduction', title: 'Start up website', description: 'Modern landing page designed to validate product-market fit and capture early-adopter emails.', imageSrc: data3, route: 'https://everythingweb.github.io/startup/', githubUrl: 'https://github.com', outcome: "Acquired 5,000 waitlist signups during the pre-launch phase." }
+        { level: 'Just Launched', title: 'NEWS website', description: 'High-traffic editorial platform delivering breaking news stories with automated social media sharing.', imageSrc: soft3, route: 'https://everythingweb.github.io/news/', githubUrl: 'https://github.com/everythingweb/news', outcome: "Achieved 1M monthly views using optimized caching strategies." },
+        { level: 'Just Launched', title: 'Entertainment website', description: 'Immersive media platform hosting streaming video content and interactive celebrity fan polls.', imageSrc: dev5, route: 'https://everythingweb.github.io/entertainment/', githubUrl: 'https://github.com/everythingweb/entertainment', outcome: "Expanded subscriber base by 35% through viral content." },
+        { level: 'Just Launched', title: 'Travel website', description: 'Global travel agency portal offering real-time flight bookings and curated destination guides.', imageSrc: design1, route: 'https://everythingweb.github.io/travel/', githubUrl: 'https://github.com/everythingweb/travel', outcome: "Reduced booking abandonment by 12% via UX redesign." },
+        { level: 'Introduction', title: 'E-commerce website', description: 'Scalable online storefront featuring secure payment processing and automated inventory management systems.', imageSrc: dev3, route: 'https://everythingweb.github.io/e-commerce/', githubUrl: 'https://github.com/everythingweb/e-commerce', outcome: "Increased average order value by 18% through cross-selling." },
+        { level: 'Introduction', title: 'Nike website', description: 'Premium athletic commerce experience featuring custom product builders and high-fidelity product imagery.', imageSrc: soft4, route: 'https://everythingweb.github.io/nike/', githubUrl: 'https://github.com/everythingweb/nike', outcome: "Decreased mobile checkout friction by 22% using Apple-Pay." },
+        { level: 'Introduction', title: 'Start up website', description: 'Modern landing page designed to validate product-market fit and capture early-adopter emails.', imageSrc: data3, route: 'https://everythingweb.github.io/startup/', githubUrl: 'https://github.com/everythingweb/startup', outcome: "Acquired 5,000 waitlist signups during the pre-launch phase." }
     ],
     'Productivity Web Apps': [
-        { level: 'Just Launched', title: 'Online forum website', description: 'A community-driven discussion platform featuring categorized boards and real-time user interactions.', imageSrc: data1, route: 'https://everythingweb.github.io/online-forum/', githubUrl: 'https://github.com', outcome: "Increased user engagement by 40% through gamification." },
-        { level: 'Latest', title: 'Business website', description: 'Professional corporate presence showcasing service offerings and integrated lead generation contact forms.', imageSrc: dev2, route: 'https://everythingweb.github.io/business/', githubUrl: 'https://github.com', outcome: "Boosted lead conversion rates by 25% via SEO." },
+        { level: 'Just Launched', title: 'Online forum website', description: 'A community-driven discussion platform featuring categorized boards and real-time user interactions.', imageSrc: data1, route: 'https://everythingweb.github.io/online-forum/', githubUrl: 'https://github.com/everythingweb/online-forum', outcome: "Increased user engagement by 40% through gamification." },
+        { level: 'Latest', title: 'Business website', description: 'Professional corporate presence showcasing service offerings and integrated lead generation contact forms.', imageSrc: dev2, route: 'https://everythingweb.github.io/business/', githubUrl: 'https://github.com/everythingweb/business', outcome: "Boosted lead conversion rates by 25% via SEO." },
         { level: 'Just Launched', title: 'Portfolio website', description: 'Creative digital showcase highlighting professional projects with an interactive, high-performance media gallery.', imageSrc: data2, route: 'https://everythingweb.github.io/my-portfolio/', githubUrl: 'https://github.com/everythingweb/my-portfolio', outcome: "Secured five high-value freelance contracts within month one." },
         { level: 'New', title: 'Educational website', description: 'Interactive learning management system providing structured course modules and automated student assessments.', imageSrc: dev4, route: 'https://everythingweb.github.io/bucregaltech/', githubUrl: 'https://github.com/everythingweb/bucregaltech', outcome: "Improved student completion rates by 50% using analytics." },
-        { level: 'Just Launched', title: 'University website', description: 'Comprehensive academic portal managing student admissions, faculty directories, and campus resource scheduling.', imageSrc: design2, route: 'https://everythingweb.github.io/harvod/', githubUrl: 'https://github.com', outcome: "Streamlined application processing time by 15% using automation." },
+        { level: 'Just Launched', title: 'University website', description: 'Comprehensive academic portal managing student admissions, faculty directories, and campus resource scheduling.', imageSrc: design2, route: 'https://everythingweb.github.io/harvod/', githubUrl: 'https://github.com/everythingweb/harvod', outcome: "Streamlined application processing time by 15% using automation." },
         { level: 'Highlights', title: 'Event website', description: 'Dynamic event management site featuring live ticketing updates and integrated speaker schedules.', imageSrc: soft1, route: 'https://everythingweb.github.io/convention/', githubUrl: 'https://github.com/everythingweb/convention', outcome: "Sold out early-bird tickets in under three hours." }
     ]
 };
@@ -72,7 +73,7 @@ const courseData = {
 const PortfolioSection = () => {
   const [activeTab, setActiveTab] = useState('All');
 
-  return (
+  return (<Element name="portfolio">
     <section className="py-20 bg-gray-50 overflow-hidden" id="courses">
       
       <motion.div 
@@ -220,7 +221,7 @@ const PortfolioSection = () => {
 
       </motion.div>
     </section>
-  );
+  </Element>);
 };
 
 export default PortfolioSection;

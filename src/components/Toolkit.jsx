@@ -1,4 +1,5 @@
 import React from "react";
+import { Element } from 'react-scroll';
 
 const toolkit = [
   {
@@ -40,7 +41,7 @@ const toolkit = [
 ];
 
 const ToolkitSection = () => {
-  return (
+  return (<Element name="services">
     <section className="relative bg-gradient-to-b from-gray-50 to-white py-20 px-6 overflow-hidden">
       {/* Background blur */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-gray-200 rounded-full blur-3xl opacity-40"></div>
@@ -81,7 +82,7 @@ const ToolkitSection = () => {
       {/* subtle top divider */}
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-gray-300 to-transparent opacity-50"></div>
     </section>
-  );
+ </Element> );
 };
 
 export default ToolkitSection;

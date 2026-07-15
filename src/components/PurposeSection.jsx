@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
+import { Element } from 'react-scroll';
 
 const PurposeSection = () => {
   const features = [
@@ -15,7 +16,7 @@ const PurposeSection = () => {
     }
   ];
 
-  return (
+  return (<Element name="about">
     <section id="about" className="w-full bg-gray-50 py-16 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
         <motion.div 
@@ -75,7 +76,7 @@ const PurposeSection = () => {
         </motion.div>
       </div>
     </section>
-  );
+  </Element>);
 };
 
 export default PurposeSection;
